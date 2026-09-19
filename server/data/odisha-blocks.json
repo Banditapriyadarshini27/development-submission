@@ -1,0 +1,26 @@
+{
+  "safeExampleBlocks": [
+    { "block": "Bamra", "district": "Sambalpur", "extractionStagePercent": 47.27, "category": "safe" },
+    { "block": "Puri", "district": "Puri", "extractionStagePercent": 64.42, "category": "safe" },
+    { "block": "Anugul", "district": "Angul", "extractionStagePercent": 63.47, "category": "safe" }
+  ],
+  "semiCriticalBlocks": [
+    { "block": "Talcher", "district": "Angul", "extractionStagePercent": 76.83, "category": "semi_critical" },
+    { "block": "Baliapal", "district": "Balasore", "extractionStagePercent": 83.19, "category": "semi_critical" },
+    { "block": "Korei", "district": "Jajpur", "extractionStagePercent": 76.52, "category": "semi_critical" },
+    { "block": "Jharsuguda", "district": "Jharsuguda", "extractionStagePercent": 70.85, "category": "semi_critical" },
+    { "block": "Bhubaneswar", "district": "Khurda", "extractionStagePercent": 88.66, "category": "semi_critical" },
+    { "block": "Bologarh", "district": "Khurda", "extractionStagePercent": 84.47, "category": "semi_critical" },
+    { "block": "Khurda", "district": "Khurda", "extractionStagePercent": 77.16, "category": "semi_critical" },
+    { "block": "Nayagarh", "district": "Nayagarh", "extractionStagePercent": 85.63, "category": "semi_critical" },
+    { "block": "Nuapada", "district": "Nuapada", "extractionStagePercent": 81.16, "category": "semi_critical" }
+  ],
+  "salineBlocks": [
+    { "block": "Ersama", "district": "Jagatsinghpur", "category": "saline" },
+    { "block": "Mahakalpada", "district": "Kendrapara", "category": "saline" },
+    { "block": "Marshaghai", "district": "Kendrapara", "category": "saline" },
+    { "block": "Rajkanika", "district": "Kendrapara", "category": "saline" },
+    { "block": "Rajnagar", "district": "Kendrapara", "category": "saline" }
+  ],
+  "source": "CGWB Dynamic Ground Water Resources of Odisha, 2024 (Annexure-XII, Block-wise Details)"
+}
