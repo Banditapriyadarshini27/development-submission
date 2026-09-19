@@ -133,13 +133,19 @@ answering exactly what was asked.`;
 const clientDist = path.join(__dirname, "../client/dist");
 if (fs.existsSync(clientDist)) {
   app.use(express.static(clientDist));
-  app.get("*", (req, res) => {
-    if (req.path.startsWith("/api")) {
-      return res.status(404).json({ error: "Endpoint not found" });
-    }
-    res.sendFile(path.join(clientDist, "index.html"));
-  });
 }
+
+// Catch-all fallback for client-side routing (Express 5 compatible)
+app.use((req, res) => {
+  if (req.path.startsWith("/api")) {
+    return res.status(404).json({ error: "Endpoint not found" });
+  }
+  const indexPath = path.join(clientDist, "index.html");
+  if (fs.existsSync(indexPath)) {
+    return res.sendFile(indexPath);
+  }
+  res.status(404).send("Not found");
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
