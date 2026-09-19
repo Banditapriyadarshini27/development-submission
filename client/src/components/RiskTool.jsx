@@ -73,9 +73,10 @@ export default function RiskTool() {
     setResult(null);
     setWeather(null);
 
+    const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
     try {
       const [res, weatherData] = await Promise.all([
-        fetch("http://localhost:5000/api/ask", {
+        fetch(`${API_URL}/api/ask`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ question, blockName })
