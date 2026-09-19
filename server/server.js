@@ -10,9 +10,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const API_KEY = process.env.IBM_WATSONX_APIKEY;
-const PROJECT_ID = process.env.IBM_PROJECT_ID;
-const REGION_URL = process.env.IBM_REGION_URL;
+const API_KEY = (process.env.IBM_WATSONX_APIKEY || "").trim();
+const PROJECT_ID = (process.env.IBM_PROJECT_ID || "").trim();
+const REGION_URL = (process.env.IBM_REGION_URL || "").trim().replace(/^[:\s]+/, "").replace(/\/+$/, "");
 
 async function getBearerToken() {
   const res = await fetch("https://iam.cloud.ibm.com/identity/token", {
