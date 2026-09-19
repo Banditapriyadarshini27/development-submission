@@ -73,7 +73,7 @@ export default function RiskTool() {
     setResult(null);
     setWeather(null);
 
-    const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+    const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? "http://localhost:5000" : "");
     try {
       const [res, weatherData] = await Promise.all([
         fetch(`${API_URL}/api/ask`, {

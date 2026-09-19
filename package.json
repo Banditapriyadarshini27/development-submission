@@ -1,0 +1,19 @@
+{
+  "name": "undercurrent",
+  "version": "1.0.0",
+  "description": "AI Groundwater Sustainability Advisor for Odisha",
+  "scripts": {
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "build": "npm --prefix server install && npm --prefix client install && npm --prefix client run build",
+    "start": "node server/server.js"
+  },
+  "keywords": [
+    "groundwater",
+    "odisha",
+    "cgwb",
+    "watsonx",
+    "rag"
+  ],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,6 +1,8 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
+const fs = require("fs");
+const path = require("path");
 const { findTopMatches } = require("./retrieve");
 const { assessRisk } = require("./riskModel");
 
@@ -126,6 +128,18 @@ answering exactly what was asked.`;
     res.status(500).json({ error: err.message });
   }
 });
+
+// Serve client static files if built
+const clientDist = path.join(__dirname, "../client/dist");
+if (fs.existsSync(clientDist)) {
+  app.use(express.static(clientDist));
+  app.get("*", (req, res) => {
+    if (req.path.startsWith("/api")) {
+      return res.status(404).json({ error: "Endpoint not found" });
+    }
+    res.sendFile(path.join(clientDist, "index.html"));
+  });
+}
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

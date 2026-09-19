@@ -118,8 +118,7 @@ npm run dev
 
 ## 🌐 Live Demo & Preview
 
-- **Live Frontend (Vercel):** *[Insert your Vercel deployment link here]*
-- **Live Backend (Render):** *[Insert your Render backend service link here]*
+- **Live Application:** *[Insert your Render deployment link here, e.g., https://undercurrent.onrender.com]*
 
 ### Preview Screenshot / GIF
 > *[Insert project screenshot or GIF here]*
